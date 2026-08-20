@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # SafeHome — Projeto Semestral
 
 O SafeHome simula uma plataforma de automação residencial/IoT com sensores, dispositivos, comandos, alertas e integrações com equipamentos de diferentes fabricantes.
@@ -24,3 +25,7 @@ java -cp out br.edu.safehome.Main
 As atividades estão em `atividades/README_SafeHome_AulaXX.md`.
 
 > O aluno deve analisar comportamento, necessidade e consequências. Nomes de classes associados a padrões não comprovam que o padrão esteja corretamente aplicado.
+=======
+# SafeHome-Projeto
+Sistema de automação residencial SafeHome desenvolvido em Java, explorando conceitos de Design de Software, arquitetura orientada a objetos e padrões de projeto como Adapter, Facade, Observer, Strategy e Factory. Projeto acadêmico focado na análise, refatoração e evolução de um sistema legado.
+>>>>>>> 56e87f92c0410b958ad232025859406d42749ca4
