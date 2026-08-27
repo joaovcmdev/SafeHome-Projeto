@@ -10,7 +10,11 @@ public class Device_service {
     private final AcmeHomeLegacyApi acme=new AcmeHomeLegacyApi();
     private final ZenIoTLegacyApi zen=new ZenIoTLegacyApi();
     private final HomePublisher publisher=new HomePublisher();
-    public final InMemoryRepository<Device> devices=new InMemoryRepository<>();
+    public final InMemoryRepository<Device> devices;
+
+    public Device_service(InMemoryRepository<Device> devices){
+        this.devices=devices;
+    }
 
     public void executeCommand(String deviceId,String command){
         Device d=devices.find(deviceId); if(d==null)return;

@@ -10,10 +10,17 @@ import br.edu.safehome.repository.InMemoryRepository;
 public class Automation_service {
     private final AutomationDecisionService automation=new AutomationDecisionService();
     private final NotificationLegacyApi notifications=new NotificationLegacyApi();
-    private final sensor_service sensor=new sensor_service();
-    private final Device_service device=new Device_service();
-    public final InMemoryRepository<Device> devices=new InMemoryRepository<>();
-    public final InMemoryRepository<AutomationRule> rules=new InMemoryRepository<>();
+    private final sensor_service sensor;
+    private final Device_service device;
+    public final InMemoryRepository<Device> devices;
+    public final InMemoryRepository<AutomationRule> rules;
+    
+    public Automation_service(InMemoryRepository<Device> devices,InMemoryRepository<AutomationRule> rules,Device_service device,sensor_service sensor){
+        this.devices=devices;
+        this.rules=rules;
+        this.device=device;
+        this.sensor=sensor;
+    }
     
     public void evaluate(String sensorId){
         SensorReading reading=sensor.readSensor(sensorId);
